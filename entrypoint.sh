@@ -15,4 +15,4 @@ ls
 echo "\e[33m\e[1mR Copying files to /"
 mv datamacore_* datamacore_latest.tar.gz
 echo "\e[33m\e[1mR File moved to datamacore_latest.tar.gz"
-
+ls
