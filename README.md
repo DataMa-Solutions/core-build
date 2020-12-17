@@ -1,2 +1,2 @@
 # core-build
-buikd action
+buid action
