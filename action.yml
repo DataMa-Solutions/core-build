@@ -1,0 +1,14 @@
+name: 'core-build'
+description: 'Automatically build DataMa core'
+branding:
+  icon: 'check-square'
+  color: 'blue'
+inputs:
+  action:  # id of input  
+    description: 'What should be run? One of: ["all", "build"]'
+    default: 'build'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{inputs.action}}
