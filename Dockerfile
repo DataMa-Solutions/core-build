@@ -30,12 +30,8 @@ RUN install2.r mailR
 RUN R -e "pacman::p_load(reactable)"
 RUN R -e "sessionInfo()"
 
-FROM datamacoredep2
+# Copies your code file from your action repository to the filesystem path `/` of the container
+COPY entrypoint.sh /entrypoint.sh
 
-RUN mkdir /home/datamacore2
-
-COPY datama-core /home/datamacore2/datama-core
-
-WORKDIR /home/datamacore2/datama-core
-
-RUN R CMD INSTALL . -c --build
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
+ENTRYPOINT ["/entrypoint.sh"]
