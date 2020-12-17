@@ -1,2 +1,2 @@
 # core-build
-buid action
+build action
